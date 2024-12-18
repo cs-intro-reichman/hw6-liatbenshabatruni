@@ -108,7 +108,7 @@ public class Runigram {
 	 * Returns an image which is the vertically flipped version of the given image. 
 	 */
 	public static Color[][] flippedVertically(Color[][] image){
-		Color[][] newImage = new Color[image.length][image[0].length];
+				Color[][] newImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image[0].length; i++) {
 			for (int j = 0; j < image.length; j++) {
 				newImage[(image.length)-1-j][i] = image[j][i];
