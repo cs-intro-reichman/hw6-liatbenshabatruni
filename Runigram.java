@@ -24,7 +24,7 @@ public class Runigram {
 		image = flippedVertically(tinypic);
 		System.out.println();
 		print(image);
-	/*
+			/*
 		// Tests the greyScaled of an image:
 		image = grayScaled(tinypic);
 		System.out.println();
@@ -98,7 +98,7 @@ public class Runigram {
 		Color[][] newImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image[0].length; i++) {
 			for (int j = 0; j < image.length; j++) {
-				newImage[i][(image.length)-1-j] = image[i][j];
+				newImage[(image.length)-1-j][i] = image[j][i];
 			}
 		}
 		return newImage;
@@ -111,7 +111,7 @@ public class Runigram {
 		Color[][] newImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image[0].length; i++) {
 			for (int j = 0; j < image.length; j++) {
-				newImage[(image.length)-1-j][i] = image[j][i];
+				newImage[i][(image.length)-1-j] = image[i][j];
 			}
 		}
 		return newImage;
