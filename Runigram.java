@@ -15,23 +15,23 @@ public class Runigram {
 		// image processing operations:
 		Color[][] image;
 
-		// Tests the horizontal flipping of an image:
-		/*image = flippedHorizontally(tinypic);
+		/*// Tests the horizontal flipping of an image:
+		image = flippedHorizontally(tinypic);
 		System.out.println();
 		print(image);*/
 		
 		// Tests the vertical flipping of an image:
-		/*image = flippedVertically(tinypic);
+		image = flippedVertically(tinypic);
 		System.out.println();
 		print(image);
-	
+	/*
 		// Tests the greyScaled of an image:
 		image = grayScaled(tinypic);
 		System.out.println();
 		print(image);*/
 
 		// Tests scaled
-		image = scaled(tinypic,3,5);
+		/*image = scaled(tinypic,3,5);
 		System.out.println();
 		print(image);
 
@@ -39,7 +39,7 @@ public class Runigram {
 		// Tests the horizontal flipping of an image:
 		image = flippedHorizontally(tinypic);
 		System.out.println();
-		print(image);
+		print(image);*/
 	}
 
 	/** Returns a 2D array of Color values, representing the image data
@@ -98,7 +98,7 @@ public class Runigram {
 		Color[][] newImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image[0].length; i++) {
 			for (int j = 0; j < image.length; j++) {
-				newImage[(image.length)-1-j][i] = image[j][i];
+				newImage[i][(image.length)-1-j] = image[i][j];
 			}
 		}
 		return newImage;
@@ -108,7 +108,7 @@ public class Runigram {
 	 * Returns an image which is the vertically flipped version of the given image. 
 	 */
 	public static Color[][] flippedVertically(Color[][] image){
-				Color[][] newImage = new Color[image.length][image[0].length];
+		Color[][] newImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image[0].length; i++) {
 			for (int j = 0; j < image.length; j++) {
 				newImage[(image.length)-1-j][i] = image[j][i];
