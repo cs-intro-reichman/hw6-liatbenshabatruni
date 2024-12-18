@@ -15,15 +15,15 @@ public class Runigram {
 		// image processing operations:
 		Color[][] image;
 
-		/*// Tests the horizontal flipping of an image:
+		// Tests the horizontal flipping of an image:
 		image = flippedHorizontally(tinypic);
 		System.out.println();
-		print(image);*/
+		print(image);
 		
 		// Tests the vertical flipping of an image:
-		image = flippedVertically(tinypic);
+		/*image = flippedVertically(tinypic);
 		System.out.println();
-		print(image);
+		print(image);*/
 			/*
 		// Tests the greyScaled of an image:
 		image = grayScaled(tinypic);
@@ -98,7 +98,7 @@ public class Runigram {
 		Color[][] newImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image[0].length; i++) {
 			for (int j = 0; j < image.length; j++) {
-				newImage[(image.length)-1-j][i] = image[j][i];
+				newImage[i][(image.length)-1-j] = image[j][i];
 			}
 		}
 		return newImage;
@@ -111,7 +111,7 @@ public class Runigram {
 		Color[][] newImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image[0].length; i++) {
 			for (int j = 0; j < image.length; j++) {
-				newImage[i][(image.length)-1-j] = image[i][j];
+				newImage[(image.length)-1-j][i] = image[j][i];
 			}
 		}
 		return newImage;
